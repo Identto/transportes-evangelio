@@ -25,6 +25,7 @@ CREATE TABLE roles(
 
 INSERT INTO roles(
 	name,
+    image,
     route,
     created_at,
     updated_at
@@ -32,13 +33,15 @@ INSERT INTO roles(
 
 VALUES(
 	'TRANSPORTES',
-    '/transport/orders/list',
+    'https://firebasestorage.googleapis.com/v0/b/transportes-evangelio.appspot.com/o/empresa.png?alt=media&token=6662c073-5447-4c6b-91fb-006701f0b8f1',
+    '/transport/home',
     '2023-01-01',
     '2023-01-01'
 );
 
 INSERT INTO roles(
 	name,
+    image,
     route,
     created_at,
     updated_at
@@ -46,13 +49,15 @@ INSERT INTO roles(
 
 VALUES(
 	'CHOFER',
-    '/driver/orders/list',
+    'https://firebasestorage.googleapis.com/v0/b/transportes-evangelio.appspot.com/o/driver%20(1).png?alt=media&token=cc439fa7-6d43-4eb8-9459-77341f8a8b92',
+    '/driver/home',
     '2003-01-01',
     '2023-01-01'
 );
 
 INSERT INTO roles(
 	name,
+    image,
     route,
     created_at,
     updated_at
@@ -60,7 +65,8 @@ INSERT INTO roles(
 
 VALUES(
 	'CLIENTE',
-    '/client/products/list',
+    'https://firebasestorage.googleapis.com/v0/b/transportes-evangelio.appspot.com/o/client%20(1).png?alt=media&token=cd3aafb9-6d12-4d0e-8d96-99147fe10247',
+    '/client/home',
     '2023-01-01',
     '2023-01-01'
 );
