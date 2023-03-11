@@ -3,7 +3,7 @@
 //const railways = require('./railway.js');
 
 const mysql = require('mysql2');
-const port = require('../server');
+//const port = require('../server');
 
 
 const db = mysql.createConnection({
