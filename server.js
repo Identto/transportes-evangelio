@@ -30,6 +30,8 @@ const addressRoutes = require('./routes/addressRoutes');
 const ordersRoutes = require('./routes/orderRoutes');
 const mercadoPagoRoutes = require('./routes/mercadoPagoRoutes');
 
+
+
 const port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
