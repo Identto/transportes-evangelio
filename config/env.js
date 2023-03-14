@@ -1,4 +1,4 @@
-const env = {
+module.exports = {
     //production: false,
     id_developer: 0,
 
@@ -9,6 +9,4 @@ const env = {
     DB_USER: process.env.DB_USER || 'root',
     DB_PASSWORD: process.env.DB_PASSWORD || 'password',
     DB_NAME: process.env.DB_NAME || 'transportes_evangelio',
-};
-
-module.exports = env;
+}
