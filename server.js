@@ -8,7 +8,7 @@ const passport = require('passport');
 const multer = require('multer');
 const io = require('socket.io')(server);
 const mercadopago = require('mercadopago');
-const env = require('/config/env');
+const env = require('../config/env');
 
 mercadopago.configure({
     sandbox: true,
