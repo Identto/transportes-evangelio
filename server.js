@@ -28,7 +28,7 @@ const productRoutes = require('./routes/productRoutes');
 const addressRoutes = require('./routes/addressRoutes');
 const ordersRoutes = require('./routes/orderRoutes');
 const mercadoPagoRoutes = require('./routes/mercadoPagoRoutes');
-const { PORT, DB_HOST } = require('./config/env');
+const { PORT } = require('./config/env');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -66,7 +66,7 @@ ordersRoutes(app);
 mercadoPagoRoutes(app);
 
 
-server.listen(PORT, DB_HOST, function() {
+server.listen(PORT, function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 
