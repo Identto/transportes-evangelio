@@ -2,16 +2,17 @@
 
 //const railways = require('./railway.js');
 
+import { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } from './env';
+
 const mysql = require('mysql2');
 //const port = require('../server');
 
-
 const db = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || '3306',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'password',
-  database: process.env.DB_NAME || 'transportes_evangelio'
+  host: DB_HOST,
+  port: DB_PORT,
+  user: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_NAME
 });
 
 db.connect(function (err) {
