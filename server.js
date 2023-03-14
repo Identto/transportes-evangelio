@@ -8,7 +8,6 @@ const passport = require('passport');
 const multer = require('multer');
 const io = require('socket.io')(server);
 const mercadopago = require('mercadopago');
-const env = require('../config/env');
 
 mercadopago.configure({
     sandbox: true,
@@ -29,6 +28,7 @@ const productRoutes = require('./routes/productRoutes');
 const addressRoutes = require('./routes/addressRoutes');
 const ordersRoutes = require('./routes/orderRoutes');
 const mercadoPagoRoutes = require('./routes/mercadoPagoRoutes');
+const { PORT, DB_HOST } = require('./config/env');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -44,7 +44,7 @@ require('./config/passport')(passport);
 
 app.disable('x-powered-by');
 
-app.set('port', env.PORT);
+app.set('port', PORT);
 
 /*
 * LLAMADO A LOS SOCKETS
@@ -66,7 +66,7 @@ ordersRoutes(app);
 mercadoPagoRoutes(app);
 
 
-server.listen(env.PORT, env.DB_HOST, function() {
+server.listen(PORT, DB_HOST, function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 
